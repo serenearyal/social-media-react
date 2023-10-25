@@ -1,7 +1,7 @@
 export const Main = () => {
     return (
         <div>
-            <h1>Main Page</h1>
+            <h1>Connect with Serene Social App!</h1>
         </div>
     )
 }
