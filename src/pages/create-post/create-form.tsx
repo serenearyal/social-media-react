@@ -4,6 +4,7 @@ import {yupResolver} from "@hookform/resolvers/yup"
 import {addDoc, collection} from "firebase/firestore"
 import {auth, db} from "../../config/firebase"
 import { useAuthState } from "react-firebase-hooks/auth"
+import { useNavigate } from "react-router-dom"
 
 interface FormData{
     title: string;
@@ -13,6 +14,7 @@ interface FormData{
 export const CreateForm = () =>{
 
     const [user] = useAuthState(auth)
+    const navigate = useNavigate()
 
     const schema = yup.object().shape({
         title: yup.string().required("Posts must have a title."),
@@ -32,6 +34,7 @@ export const CreateForm = () =>{
             userId: user?.uid,
 
         })
+    navigate("/")
     }
     return (
         <form onSubmit= {handleSubmit(onCreatePost)}>
