@@ -1,0 +1,47 @@
+*:focus{
+    outline: none;
+}
+
+form{
+    margin: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: var(--lightblue);
+    display: inline-block;
+}
+
+.title, .description{
+    height: 80px;
+    font-size: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: whitesmoke;
+}
+
+.description{
+    height: 50px;
+    font-size: 30px;
+    width: 100%;
+}
+
+.dump-button{
+    color: whitesmoke;
+    background-color: var(--blue);
+    text-decoration: none;
+    transition: all 400ms ease;
+    padding: var(--paddding-button);
+    border-radius: 4px;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+}
+
+.dump-button:hover{
+    background-color: whitesmoke;
+    color: var(--blue);
+}
+
+.dump-button:active{
+    opacity: 0.6;
+}
