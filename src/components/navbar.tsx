@@ -16,10 +16,14 @@ export const Navbar = () => {
         await signOut(auth)
         navigate("./")
     }
+
+    const home = ()=>{
+        navigate("./")
+    }
     return (
         <div className='navbar'>
             <div className="logo">
-                <img src={logo} alt="" />
+                <img onClick={home}src={logo} alt="" />
             </div>
             <div className="links">
                 <Link to="/"> Home</Link>
