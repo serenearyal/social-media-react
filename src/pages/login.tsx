@@ -11,7 +11,7 @@ export const Login = () => {
     }
     return (
         <div>
-            <h1>Sign in with Google to continue.</h1>
+            <h1>Sign in with Google to post.</h1>
             <button onClick={signIn}>Sign in with Google</button>
         </div>
     )

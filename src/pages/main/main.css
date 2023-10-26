@@ -1,0 +1,17 @@
+.posts{
+    display: flex;
+    gap: 40px;
+    margin: 30px;
+}
+
+.main-header h1{
+    color: whitesmoke;
+    background-color: var(--darkblue);
+    padding: 5px 10px;
+    font-size: 70px;
+    display: inline-block;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: all 400ms ease;
+    cursor: pointer;
+}

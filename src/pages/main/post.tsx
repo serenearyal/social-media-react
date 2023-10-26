@@ -3,6 +3,7 @@ import {Post as IPost} from "./main"
 import { auth, db } from "../../config/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useEffect, useState } from "react";
+import "./post.css"
 
 interface Props {
     post: IPost;
@@ -37,16 +38,16 @@ export const Post = (props: Props)=>{
         getLikes()
     },[])
     return (
-            <div>
-                <div>
+            <div className="post">
+                <div className="post-title">
                     <h1> {post.title}</h1>
                 </div>
 
-                <div>
+                <div className="post-description">
                     <p>{post.description}</p>
                 </div>
-                <div>
-                    <p>Dumper: {post.username}</p>
+                <div className="post-footer">
+                    <p>Dump by <span>{post.username}</span></p><br />
                     <button onClick={addLike}>&hearts;</button>
                     <p>{likeAmount}</p>
                 </div>
